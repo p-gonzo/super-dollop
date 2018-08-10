@@ -1,0 +1,48 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+#title {
+  text-align: center;
+}
+#posts {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.post {
+  flex-basis: 25%;
+  background-color: rgb(198, 234, 248);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.post:hover {
+  background-color: skyblue;
+}
+
+.title {
+  text-align: center;
+  font-weight: 100;
+}
+
+.title a {
+  text-decoration: none;
+}
+
+.published {
+  color: gray;
+}
+
+@media only screen and (max-width: 800px) {
+  .post {
+    flex-basis: 80%;
+  }
+}

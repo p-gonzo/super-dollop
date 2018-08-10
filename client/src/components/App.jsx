@@ -15,8 +15,6 @@ class App extends React.Component {
       .then((data) => {
         this.setState({
           posts: data.data
-        }, () => {
-          console.log(this.state);
         });
       })
       .catch((err) => {
@@ -27,12 +25,14 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>303 Software Technical Node + React Test</h1>
-        <h2>Philip Gonzalez</h2>
-      <ul>
+        <div id='title'>
+          <h1>303 Software Technical Node + React Test</h1>
+          <h2>Philip Gonzalez</h2>
+        </div>
+      <div id = 'posts'>
         {this.state.posts.map((post) => <Post post={post} />)}
-      </ul>
       </div>
+    </div>
     )
   }
 }
